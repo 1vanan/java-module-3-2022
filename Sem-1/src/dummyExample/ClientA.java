@@ -1,11 +1,12 @@
 package dummyExample;
 
 public class ClientA implements Client {
-    private Service service = new ServiceB();
+    private Service service;
 
     ClientA(Service service){
         this.service = service;
     }
+
     @Override
     public void doSomething() {
         System.out.println(service.getSomeInfo() + " (and client A)");
